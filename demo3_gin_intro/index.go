@@ -1,13 +1,14 @@
 package main
 
 import (
+	"fmt"
 	"net/http"
 
 	"github.com/gin-gonic/gin"
 )
 
 type LoginForm struct {
-	User     string `form:"username" binding:"required"`
+	Username string `form:"username" binding:"required"`
 	Password string `form:"password" binding:"required"`
 }
 
@@ -35,17 +36,16 @@ func main() {
 	r.POST("/login", func(c *gin.Context) {
 		var form LoginForm
 		if c.ShouldBind(&form) == nil {
-			if form.User == "admin" && form.Password == "1234" {
-				c.JSON(200, gin.H{"status": "you are logged in"})
+			if form.Username == "admin" && form.Password == "1234" {
+				msg := fmt.Sprintf("you are logged with: %s,%s", form.Username, form.Password)
+				c.JSON(200, gin.H{"status": msg})
 			} else {
 				c.JSON(401, gin.H{"status": "unauthorized"})
 			}
 		} else {
-			c.JSON(401, gin.H{"status": "unable to bind"})
+			c.JSON(401, gin.H{"status": "unable to bind data"})
 		}
 	})
-
-	
 
 	r.Run(":85")
 }
