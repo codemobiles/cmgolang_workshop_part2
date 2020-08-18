@@ -1,9 +1,12 @@
 [GIN-debug] GET    /                         --> main.main.func1 (4 handlers)
-[GIN-debug] GET    /profile                  --> main.main.func2 (4 handlers)
+[GIN-debug] GET    /error                    --> main.main.func2 (4 handlers)
+[GIN-debug] GET    /profile                  --> main.main.func3 (4 handlers)
 [GIN-debug] Listening and serving HTTP on :85
-[GIN] 2020/08/18 - 17:49:59 | 200 |      88.007µs |             ::1 | GET      "/"
-[GIN] 2020/08/18 - 17:49:59 | 200 |       9.646µs |             ::1 | GET      "/"
-[GIN] 2020/08/18 - 17:50:07 | 404 |         188ns |             ::1 | GET      "/lek"
-[GIN] 2020/08/18 - 17:50:07 | 404 |         264ns |             ::1 | GET      "/lek"
-[GIN] 2020/08/18 - 17:50:16 | 200 |      11.206µs |             ::1 | GET      "/profile"
-[GIN] 2020/08/18 - 17:50:16 | 200 |       6.277µs |             ::1 | GET      "/profile"
+[GIN] 2020/08/18 - 18:28:57 | 200 |     117.207µs |             ::1 | GET      "/error"
+[GIN] 2020/08/18 - 18:29:02 | 200 |      58.587µs |             ::1 | GET      "/error"
+625µs |             ::1 | GET      "/profile"
+Count : 4
+[GIN] 2020/08/18 - 18:26:59 | 200 |      55.929µs |             ::1 | GET      "/profile"
+Count : 5
+[GIN] 2020/08/18 - 18:27:05 | 200 |      34.766µs |             ::1 | GET      "/profile"
+ : 6[GIN] 2020/08/18 - 18:25:59 | 200 |      23.902µs |             ::1 | GET      "/profile"
