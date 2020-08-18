@@ -1,12 +1,18 @@
-[GIN-debug] GET    /                         --> main.main.func1 (4 handlers)
-[GIN-debug] GET    /error                    --> main.main.func2 (4 handlers)
-[GIN-debug] GET    /profile                  --> main.main.func3 (4 handlers)
+[GIN-debug] GET    /                         --> main.main.func2 (4 handlers)
+[GIN-debug] GET    /error                    --> main.main.func3 (4 handlers)
+[GIN-debug] GET    /profile                  --> main.main.func4 (4 handlers)
 [GIN-debug] Listening and serving HTTP on :85
-[GIN] 2020/08/18 - 18:28:57 | 200 |     117.207µs |             ::1 | GET      "/error"
-[GIN] 2020/08/18 - 18:29:02 | 200 |      58.587µs |             ::1 | GET      "/error"
-625µs |             ::1 | GET      "/profile"
-Count : 4
-[GIN] 2020/08/18 - 18:26:59 | 200 |      55.929µs |             ::1 | GET      "/profile"
-Count : 5
-[GIN] 2020/08/18 - 18:27:05 | 200 |      34.766µs |             ::1 | GET      "/profile"
- : 6[GIN] 2020/08/18 - 18:25:59 | 200 |      23.902µs |             ::1 | GET      "/profile"
+Count : 1::1  "GET /profile HTTP/1.1 200 106.445µs "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_6) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/84.0.4147.125 Safari/537.36" "
+Count : 2::1  "GET /profile HTTP/1.1 200 31.617µs "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_6) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/84.0.4147.125 Safari/537.36" "
+Count : 3::1  "GET /profile HTTP/1.1 200 26.437µs "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_6) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/84.0.4147.125 Safari/537.36" "
+Count : 4::1  "GET /profile HTTP/1.1 200 40.948µs "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_6) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/84.0.4147.125 Safari/537.36" "
+Count : 5::1  "GET /profile HTTP/1.1 200 34.397µs "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_6) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/84.0.4147.125 Safari/537.36" "
+Count : 6::1  "GET /profile HTTP/1.1 200 51.077µs "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_6) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/84.0.4147.125 Safari/537.36" "
+Count : 7::1  "GET /profile HTTP/1.1 200 37.853µs "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_6) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/84.0.4147.125 Safari/537.36" "
+Count : 8::1  "GET /profile HTTP/1.1 200 67.681µs "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_6) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/84.0.4147.125 Safari/537.36" "
+[GIN-debug] GET    /                         --> main.main.func2 (4 handlers)
+[GIN-debug] GET    /error                    --> main.main.func3 (4 handlers)
+[GIN-debug] GET    /profile                  --> main.main.func4 (4 handlers)
+[GIN-debug] Listening and serving HTTP on :85
+Count : 1::1  "GET /profile HTTP/1.1 200 105.468µs "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_6) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/84.0.4147.125 Safari/537.36" "
+Count : 2::1  "GET /profile HTTP/1.1 200 29.792µs "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_6) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/84.0.4147.125 Safari/537.36" "
