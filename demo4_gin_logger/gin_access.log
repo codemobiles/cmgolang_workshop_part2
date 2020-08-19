@@ -1,7 +1,0 @@
-[GIN-debug] GET    /                         --> main.main.func2 (4 handlers)
-[GIN-debug] GET    /profile                  --> main.main.func3 (4 handlers)
-[GIN-debug] GET    /error                    --> main.main.func4 (4 handlers)
-[GIN-debug] GET    /login                    --> main.main.func5 (4 handlers)
-[GIN-debug] GET    /book/:from/:to           --> main.main.func6 (4 handlers)
-[GIN-debug] POST   /login                    --> main.main.func7 (4 handlers)
-[GIN-debug] Listening and serving HTTP on :85
