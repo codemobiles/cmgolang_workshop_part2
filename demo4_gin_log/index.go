@@ -9,6 +9,8 @@ import (
 
 func main() {
 	r := gin.Default()
+	gin.DisableConsoleColor()
+	gin.ForceConsoleColor()
 	runningDir, _ := os.Getwd()
 	count := 0
 
@@ -19,19 +21,24 @@ func main() {
 	gin.DefaultWriter = accesslogfile
 	// r.Use(gin.Logger())
 	// custom format logger
-	r.Use(gin.LoggerWithFormatter(func(param gin.LogFormatterParams) string {
 
-		return fmt.Sprintf("%s  \"%s %s %s %d %s \"%s\" %s\"\n",
-			param.ClientIP,
-			param.Method,
-			param.Path,
-			param.Request.Proto,
-			param.StatusCode,
-			param.Latency,
-			param.Request.UserAgent(),
-			param.ErrorMessage,
-		)
-	}))
+	/*
+		r.Use(gin.LoggerWithFormatter(func(param gin.LogFormatterParams) string {
+
+			return fmt.Sprintf("%s  \"%s %s %s %d %s \"%s\" %s\"\n",
+				param.ClientIP,
+				param.Method,
+				param.Path,
+				param.Request.Proto,
+				param.StatusCode,
+				param.Latency,
+				param.Request.UserAgent(),
+				param.ErrorMessage,
+			)
+		}))
+	*/
+
+	r.Use(gin.LoggerWithWriter(gin.DefaultWriter, "/login"))
 
 	r.GET("/", func(c *gin.Context) {
 		c.Data(200, "text/html; charset=utf-8", []byte("Root"))
@@ -45,7 +52,7 @@ func main() {
 
 	r.GET("/profile", func(c *gin.Context) {
 		count = count + 1
-		accesslogfile.WriteString(fmt.Sprintf("Count : %d", count))
+		accesslogfile.WriteString(fmt.Sprintf("Count : %d\n", count))
 		c.Data(200, "text/html; charset=utf-8", []byte("profile"))
 	})
 

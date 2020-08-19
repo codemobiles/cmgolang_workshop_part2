@@ -1,18 +1,32 @@
-[GIN-debug] GET    /                         --> main.main.func2 (4 handlers)
-[GIN-debug] GET    /error                    --> main.main.func3 (4 handlers)
-[GIN-debug] GET    /profile                  --> main.main.func4 (4 handlers)
+[GIN] 2020/08/19 - 07:33:16 |[90;43m 404 [0m|         811ns |             ::1 |[97;44m GET     [0m "/profileasdfasf"
+[GIN] 2020/08/19 - 07:33:16 |[90;43m 404 [0m|         301ns |             ::1 |[97;44m GET     [0m "/profileasdfasf"
+[GIN] 2020/08/19 - 07:33:17 |[90;43m 404 [0m|         323ns |             ::1 |[97;44m GET     [0m "/profileasdfasf"
+[GIN] 2020/08/19 - 07:33:17 |[90;43m 404 [0m|         288ns |             ::1 |[97;44m GET     [0m "/profileasdfasf"
+[GIN] 2020/08/19 - 07:33:17 |[90;43m 404 [0m|         313ns |             ::1 |[97;44m GET     [0m "/profileasdfasf"
+[GIN] 2020/08/19 - 07:33:17 |[90;43m 404 [0m|         321ns |             ::1 |[97;44m GET     [0m "/profileasdfasf"
+[GIN] 2020/08/19 - 07:33:17 |[90;43m 404 [0m|         305ns |             ::1 |[97;44m GET     [0m "/profileasdfasf"
+[GIN] 2020/08/19 - 07:33:17 |[90;43m 404 [0m|         327ns |             ::1 |[97;44m GET     [0m "/profileasdfasf"
+[GIN] 2020/08/19 - 07:33:21 |[97;42m 200 [0m|       15.16µs |             ::1 |[97;44m GET     [0m "/"
+[GIN] 2020/08/19 - 07:33:22 |[97;42m 200 [0m|       5.965µs |             ::1 |[97;44m GET     [0m "/"
+Count : 1Count : 2Count : 3Count : 4[GIN-debug] GET    /                         --> main.main.func1 (4 handlers)
+[GIN-debug] GET    /error                    --> main.main.func2 (4 handlers)
+[GIN-debug] GET    /profile                  --> main.main.func3 (4 handlers)
 [GIN-debug] Listening and serving HTTP on :85
-Count : 1::1  "GET /profile HTTP/1.1 200 106.445µs "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_6) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/84.0.4147.125 Safari/537.36" "
-Count : 2::1  "GET /profile HTTP/1.1 200 31.617µs "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_6) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/84.0.4147.125 Safari/537.36" "
-Count : 3::1  "GET /profile HTTP/1.1 200 26.437µs "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_6) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/84.0.4147.125 Safari/537.36" "
-Count : 4::1  "GET /profile HTTP/1.1 200 40.948µs "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_6) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/84.0.4147.125 Safari/537.36" "
-Count : 5::1  "GET /profile HTTP/1.1 200 34.397µs "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_6) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/84.0.4147.125 Safari/537.36" "
-Count : 6::1  "GET /profile HTTP/1.1 200 51.077µs "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_6) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/84.0.4147.125 Safari/537.36" "
-Count : 7::1  "GET /profile HTTP/1.1 200 37.853µs "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_6) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/84.0.4147.125 Safari/537.36" "
-Count : 8::1  "GET /profile HTTP/1.1 200 67.681µs "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_6) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/84.0.4147.125 Safari/537.36" "
-[GIN-debug] GET    /                         --> main.main.func2 (4 handlers)
-[GIN-debug] GET    /error                    --> main.main.func3 (4 handlers)
-[GIN-debug] GET    /profile                  --> main.main.func4 (4 handlers)
+Count : 1
+Count : 2
+Count : 3
+Count : 4
+Count : 5
+Count : 6
+[GIN-debug] GET    /                         --> main.main.func1 (4 handlers)
+[GIN-debug] GET    /error                    --> main.main.func2 (4 handlers)
+[GIN-debug] GET    /profile                  --> main.main.func3 (4 handlers)
 [GIN-debug] Listening and serving HTTP on :85
-Count : 1::1  "GET /profile HTTP/1.1 200 105.468µs "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_6) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/84.0.4147.125 Safari/537.36" "
-Count : 2::1  "GET /profile HTTP/1.1 200 29.792µs "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_6) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/84.0.4147.125 Safari/537.36" "
+Count : 1
+[GIN] 2020/08/19 - 07:34:39 |[97;42m 200 [0m|     104.281µs |             ::1 |[97;44m GET     [0m "/profile"
+Count : 2
+[GIN] 2020/08/19 - 07:34:39 |[97;42m 200 [0m|      47.249µs |             ::1 |[97;44m GET     [0m "/profile"
+Count : 3
+[GIN] 2020/08/19 - 07:34:44 |[97;42m 200 [0m|      47.505µs |             ::1 |[97;44m GET     [0m "/profile"
+Count : 4
+[GIN] 2020/08/19 - 07:34:45 |[97;42m 200 [0m|      39.737µs |             ::1 |[97;44m GET     [0m "/profile"
