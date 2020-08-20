@@ -2,21 +2,21 @@ package main
 
 import (
 	"demo8/api"
-
 	"github.com/gin-gonic/gin"
 )
+
+
 
 func main() {
 	router := gin.Default()
 
-	// Simple group: authen
+	// Authen group
 	authenAPI := router.Group("/authen")
 	{
 		authenAPI.GET("/login", api.Login)
-		authenAPI.GET("/register", api.Register)
+		authenAPI.GET("/register", api.Register)		
 	}
 
-	// Simple group: stock
 	stockAPI := router.Group("/stock")
 	{
 		stockAPI.GET("/list", api.ListProduct)
@@ -24,4 +24,5 @@ func main() {
 	}
 
 	router.Run(":85")
+
 }
