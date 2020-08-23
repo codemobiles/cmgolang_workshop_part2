@@ -1,20 +1,29 @@
 package main
 
 import (
-	"net/http"
-
 	"github.com/gin-gonic/gin"
 )
 
 func main() {
-	router := gin.Default()
+	r := gin.Default()
 
-	router.GET("/static/file", func(c *gin.Context) {
-		c.File("static/file.go")
+	r.GET("/image", func(c *gin.Context) {
+		c.File("static/test.jpg")
 	})
 
-	var fs http.FileSystem = // ...
-	router.GET("/fs/file", func(c *gin.Context) {
-		c.FileFromFS("fs/file.go", fs)
+	r.GET("/html", func(c *gin.Context) {
+		c.File("static/index.html")
 	})
+
+	r.GET("/download", func(c *gin.Context) {
+		c.Header("Content-Description", "Simulation File Download")
+		c.Header("Content-Transfer-Encoding", "binary")
+		c.Header("Content-Disposition", "attachment; filename="+"download.jpg")
+		c.Header("Content-Type", "application/octet-stream")
+
+		c.File("static/test.jpg")
+	})
+
+	r.Run(":85")
+
 }
