@@ -17,7 +17,7 @@ func main() {
 	r.GET("/moreJSON", func(c *gin.Context) {
 		// You also can use a struct
 		var msg struct {
-			Name    string `json:"user"`
+			Name    string `json:"User"`
 			Message string
 			Number  int
 		}
@@ -37,7 +37,9 @@ func main() {
 		c.YAML(http.StatusOK, gin.H{"message": "hey", "status": http.StatusOK})
 	})
 
-	
+	r.GET("/someString", func(c *gin.Context) {
+		c.String(http.StatusOK, "some string")
+	})
 
 	// Listen and serve on 0.0.0.0:8080
 	r.Run(":85")
